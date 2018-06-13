@@ -14,9 +14,7 @@ func main() {
 		Region: aws.String("eu-west-1")}))
 
 	allGrp := getAllSecGrps(ec2svc)
-	//fmt.Println(allGrp)
 
-	//fmt.Println(allGrp.SecurityGroups[2].IpPermissions)
 	// Print all Description
 	for _, d := range allGrp.SecurityGroups {
 		fmt.Printf("Name: %v\n\n%v\n", *d.Description, d.IpPermissions)
